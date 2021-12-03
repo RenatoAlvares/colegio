@@ -32,11 +32,7 @@ public class UsuarioService implements UserDetailsService{
 	}
 	
 	public List<GrantedAuthority> buildgrante(){
-		String[] roles = {"LECTOR","USUARIO","ADMINISTRADOR"};
 		List<GrantedAuthority> auths=new ArrayList<>();
-		/*for(int i=0; i<rol; i++) {
-			auths.add(new SimpleGrantedAuthority(roles[i]));
-		}*/
 		auths.add(new SimpleGrantedAuthority("ADMINISTRADOR"));
 		return auths;
 	}
